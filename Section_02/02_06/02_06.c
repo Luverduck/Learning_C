@@ -14,5 +14,12 @@ int main(void)
 
 	int c = a + b;
 
+	// 주석 단축키
+	// 주석 처리 
+	// - [Ctrl] + [K] + [C]
+	// - [Ctrl[ + [Shift] + [/]
+	// 주석 해제
+	// - [Ctrl] + [K] + [U]
+
 	return 0;
 }
