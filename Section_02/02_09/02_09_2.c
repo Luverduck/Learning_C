@@ -22,7 +22,7 @@ void say_hello(void) // 함수 선언 (function declaration)
 #include <stdio.h>
 int main(void)
 {
-	// 생성한 say_hello 함수 호출 (function call)
+	// 생성한 say_hello 함수 호출
 	say_hello();
 
 	return 0;
