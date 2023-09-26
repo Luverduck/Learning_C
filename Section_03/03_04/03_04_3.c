@@ -16,7 +16,7 @@ int main(void)
 
 	// 실수는 기본적으로 double 자료형으로 표현된다.
 	//dollar = won * 0.00089; // won은 float 자료형인 반면 0.00089는 double이므로 컴파일 중 오류 발생
-	dollar = won * 0.00089f; // 0.00089가 float형 리터럴로 변환
+	dollar = won * 0.00089f; // 리터럴 상수가 float임을 명시적으로 표시하기 위해 실수 접미사 f를 붙인다.
 
 	// 연산
 	printf("Dollar = %f\n", dollar);
