@@ -13,7 +13,7 @@ int main(void)
 {
 	// 오버플로우 1) 자료형이 가질 수 있는 최대값보다 큰 값을 저장할 때
 	// unsigned int가 가질 수 있는 최대값 4294967295보다 큰 값을 저장할 경우
-	unsigned int u_int_max = 4294967297;
+	unsigned int u_int_max = UINT_MAX + 1;
 
 	// i to binary representation
 	char buffer[33]; 
