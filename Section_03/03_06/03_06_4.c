@@ -1,7 +1,7 @@
 // 3.6 정수의 오버플로우
 /*
 	오버플로우 (Overflow)
-
+	컴퓨터의 산술 연산(arithmetic operation)이 허용된 표현 범위를 초과하는 값을 생성할 때 발생하는 오류
 */
 
 #include <stdio.h>
