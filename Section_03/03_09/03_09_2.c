@@ -13,7 +13,7 @@ int main(void)
 
 	// 출력
 	printf("int32 = %d\n", i_32);
-	// 형식 지정자를 inttypes.h에 정의된 매크로 상수 PRId32로 바꾼다.
+	// 서식 지정자를 inttypes.h에 정의된 매크로 상수 PRId32로 바꾼다.
 	printf("int32 = %" PRId32 "\n", i_32);
 
 	return 0;
