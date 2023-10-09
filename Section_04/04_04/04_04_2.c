@@ -20,7 +20,13 @@ int main(void)
 	str5[4] = 'o';
 	str5[5] = '\0';
 
-	printf("str5 : %zu %zu\n", sizeof(str5), strlen(str5));
+	printf("str5 : %zu %zu\n", sizeof(str5), strlen(str5)); // 결과 : 8 5 (64bit) / 4 5 (32bit)
+	
+	// 포인터 변수에는 문자열 배열 0번째 요소의 주소가 저장된다.
+	// 따라서 sizeof 연산의 결과는 포인터 변수에 저장된 주소값의 크기이다.
+	// 실행 환경(플랫폼)에 따라 sizeof 연산의 결과가 다르다.
+	// 64bit 환경에서는 8[Byte]의 주소값을 사용하므로 sizeof 연산의 결과는 8이 되며
+	// 32bit 환경에서는 4[Byte]의 주소값을 사용하므로 sizeof 연산의 결과는 4가 된다
 
 	return 0;
 }
