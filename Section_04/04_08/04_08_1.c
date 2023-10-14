@@ -95,14 +95,14 @@ int main(void)
 	printf("*%50jd*\n", INT64_MIN);
 	printf("*%50ju*\n", UINT64_MAX);
 	printf("*%50ju*\n", 0ll);
-	// z : 정수형 형식 변환 지정자와 함께 사용하며, size_t형으로 표시
+	// z : 정수형 형식 변환 지정자와 함께 사용하며, size_t형으로 출력
 	printf("*%50zd*\n", INT64_MAX);
 	printf("*%50zd*\n", INT64_MIN);
 	printf("*%50zu*\n", UINT64_MAX);
 	printf("*%50zu*\n", 0ll);
-	// t : 정수형 형식 변환 지정자와 함께 사용하며, ptrdiff_t형으로 표시
+	// t : 정수형 형식 변환 지정자와 함께 사용하며, ptrdiff_t형으로 출력
 	printf("*%50hu*\n", 0);
-	// L : 실수형 형식 변환 지정자와 함께 사용하며, long double로 표시
+	// L : 실수형 형식 변환 지정자와 함께 사용하며, long double형으로 출력
 	printf("*%50Lf*\n", FLT_MAX);
 	printf("*%50.47Lf*\n", FLT_MIN);
 	printf("*%50.54Lf*\n", FLT_TRUE_MIN);
