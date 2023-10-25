@@ -21,5 +21,17 @@
     <ClCompile Include="05_11_2.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="05_11_2_q.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="05_11_3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="05_11_4.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="05_11_5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

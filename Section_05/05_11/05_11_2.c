@@ -30,12 +30,12 @@ int main(void)
 	printf("double value:\t%A\n", double_2);	// 결과 : 3.234000
 	printf("int value:\t%A\n", (float)int_2);	// 결과 : 3.000000
 
-	// 실수형 -> 실수형 : 소수점 이하 반올림(rounding)
-	double double_3 = 3.14159;
+	// 실수형 -> 실수형 : 가수부를 초과하는 비트의 값 절삭(truncation)
+	double double_3 = 3.1415928;
 	float float_3 = double_3;
 	printf("\ndouble to float\n");
-	printf("double value:\t%A\n", double_3);	// 결과 : 0X1.921F9F01B866EP+1
-	printf("float value:\t%A\n", float_3);		// 결과 : 0X1.921FA00000000P+1
+	printf("double value:\t%.7f\n", double_3);	// 결과 : 3.1415928
+	printf("float value:\t%.7f\n", float_3);	// 결과 : 3.1415927
 	
 	// 실수형 간의 강등에서 변환한 자료형이 가수부 비트를 모두 표시할 수 있다면 절삭이 발생하지 않는다.
 	double double_4 = 1.25;
