@@ -18,11 +18,13 @@ int main(void)
 	// ex1) while문의 표현식에 관계 연산자를 사용하는 경우
 	int n = 0;
 	while (n++ < 5) // n이 5 이하인 동안만 반복
-		printf("%d", n);
+		printf("%d ", n);
+
+	printf("\n\n");
 
 	// ex2) while문의 표현식에 관계 연산자를 사용하는 경우
-	int c = 'A';
-	while (c != 'A') // c가 'A'가 아닌 동안만 반복 -> 오버플로우 후 'A'가 될 때 루프 탈출
+	char c = 'A';
+	while (c != 'Z') // c가 'Z'가 아닌 동안만 반복 -> c가 'Z'가 될 때 루프 탈출
 		printf("%c", c++);
 
 	return 0;
