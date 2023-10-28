@@ -26,10 +26,12 @@ int main() {
 	scanf("%lf", &guess);
 	
 	// fabs() : 인수의 절대값 출력
-	while ( fabs(guess - PI) != 0.1 ) { // 입력과 PI의 차이가 0.1일 때 루프 탈출 
+	while ( fabs(guess - PI) > 0.01 ) { // 입력과 PI의 차이가 0.1일 때 루프 탈출 
 		printf("Fool! Try again.\n");
-		scanf("lf", &guess);
+		scanf("%lf", &guess);
 	}
 
 	printf("Good!");
+
+	return 0;
 }
