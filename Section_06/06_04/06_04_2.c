@@ -21,13 +21,15 @@ int main() {
 	const double PI = 3.1415926535897932384626433832795;
 	double guess = 0.0;
 
-	printf("Input : ");
-	scanf("%lf", &guess);
+	printf("Input PI : ");
+	scanf("%lf", &guess);;
 
 	while (guess != PI) {
 		printf("Fool! Try again.\n");
-		scanf("lf", &guess);
+		scanf("%lf", &guess);
 	}
 
 	printf("Good!");
+
+	return 0;
 }
