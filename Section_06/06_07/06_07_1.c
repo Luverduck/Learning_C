@@ -1,4 +1,4 @@
-// 6.7 관계 연산자의 우선순위 
+// 6.7 관계 연산자의 우선순위
 /*
 	연산자의 우선순위 (Operator Precedence)
 	https://en.cppreference.com/w/c/language/operator_precedence
