@@ -18,5 +18,8 @@
     <ClCompile Include="06_09_1.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="06_09_2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
