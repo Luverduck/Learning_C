@@ -85,6 +85,7 @@ int get_integer(void) {
 	return input;
 };
 
+// 1부터 입력받은 정수까지 카운트
 void count(void) {
 	// 안내 텍스트
 	printf("Enter an integer :\n");
