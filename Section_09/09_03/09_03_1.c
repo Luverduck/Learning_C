@@ -13,7 +13,7 @@ int_min(int, int);
 
 int main(void)
 {
-	int_main(1, 2);
+	int_min(1, 2);
 
 	int i1, i2;
 
