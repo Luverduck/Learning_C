@@ -27,7 +27,7 @@ int main(void)
 	a_ptr = &a;
 
 	// 주소 연산자 &
-	printf("address of variabl = %p\n", &a);
+	printf("address of variable = %p\n", &a);
 	printf("value of pointer = %p\n", a_ptr);
 	printf("address of pointer = %p\n", &a_ptr);
 
