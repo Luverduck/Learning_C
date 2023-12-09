@@ -14,17 +14,17 @@ int main(void)
 		arr[i] = (i + 1) * 100;
 	};
 
-	// 배열의 시작 주소 저장
-	int* ptr = arr;
+	// 배열의 1번째 요소 메모리를 가리키는 배열 포인터 선언
+	int* ptr = arr + 1; // ptr = arr + 1 = &arr[0] + 1 = &arr[1] = 000000FE458FF6A9
 
-	// 2. 포인터의 덧셈/뺄셈과 배열 요소 역참조
-	// 배열 포인터의 인덱스 연산시 배열의 특정 인덱스 요소의 값에 역참조 연산 없이 접근할 수 있다.
-	// ptr[n] = *(ptr + n) = *(&ptr[0] + n)    
+	// 배열 포인터와 정수의 덧셈/뺄셈
+	// ptr + n = arr + n = &arr[1] + n = &arr[n + 1]
 
-	printf("%p %d\n", &ptr[0], ptr[0]); // 결과 : 000000FE458FF6A5 100
-	printf("%p %d\n", &ptr[1], ptr[1]); // 결과 : 000000FE458FF6A9 200
-	printf("%p %d\n", &ptr[2], ptr[2]); // 결과 : 000000FE458FF6AD 300
-	printf("%p %d\n", &ptr[3], ptr[3]); // 결과 : 000000FE458FF6B1 400
+	printf("%p %p\n", ptr + 1, arr + 2);
+	// 결과 : 000000FE458FF6A9 000000FE458FF6A9
+
+	printf("%d %d\n", *(ptr + 1), *(arr + 2));
+	// 결과 : 300 300
 
 	return 0;
 }
