@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="10_06_me_1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="10_06_1.c">
       <Filter>Source Files</Filter>
     </ClCompile>
