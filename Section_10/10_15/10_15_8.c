@@ -24,6 +24,5 @@ int main(void)
 	// 포인터를 역참조한 메모리의 값 변경
 	*ptr_x = 10;
 
-
 	return 0;
 }
