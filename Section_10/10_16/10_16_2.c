@@ -6,7 +6,7 @@
 #define ROWS 3
 #define COLS 4
 
-// 2차원 배열을 인수로 하는 경우 (1)
+// 함수 호출시 2차원 배열을 인수로 전달 (1)
 int sum_2d_1(int arr_2d[ROWS][COLS]);
 
 int main(void)
@@ -24,14 +24,14 @@ int main(void)
 	return 0;
 }
 
-// 2차원 배열을 인수로 하는 경우 (1)
-// 호출한 함수 내에서 arr_2d의 자료형은 int (*)[4]이므로 
-// sizeof 연산자로 행 정보를 알아낼 수 없다.
+// 함수 호출시 2차원 배열을 인수로 전달 (1)
+// - 호출한 함수 내에서 2차원 배열 변수의 자료형은 int(*)[4] 이므로 행을 알아낼 수 없다.
+// - 행의 값을 기호적 상수(전역 변수)로 정의하여 함수에서도 접근할 수 있도록 한다.
 int sum_2d_1(int arr_2d[ROWS][COLS])
 {
 	int sum = 0;
 	for (int j = 0; j < ROWS; ++j) {
-		for (int i = 0; i < COLS; ++i) {
+		for (int i = 0; i < sizeof(arr_2d[0]) / sizeof(int); ++i) {
 			sum += arr_2d[j][i];
 		};
 	};
