@@ -28,7 +28,7 @@ void custom_put_1(const char* str)
 // 줄 바꿈을 하는 출력 함수
 int custom_put_2(const char* str)
 {
-	int count = 0;
+	int count = 0; // 출력한 글자 수
 	while (*str)
 	{
 		putchar(*str++);
