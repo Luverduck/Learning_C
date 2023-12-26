@@ -16,7 +16,7 @@
 
 int main()
 {
-	char str[] = "ABCD";
+	char str[100] = "";
 	int i = 123;
 	double d = 3.14;
 
