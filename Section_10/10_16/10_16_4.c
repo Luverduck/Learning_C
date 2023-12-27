@@ -31,9 +31,9 @@ int sum_2d_3(int* arr_2d, int row, int col)
 {
 	int sum = 0;
 
-	for (int j = 0; j < row; ++j) {
-		for (int i = 0; i < col; ++i) {
-			sum += *(arr_2d + i + col * j); // arr_2d[ i + col * j ]
+	for (int i = 0; i < row; ++i) {
+		for (int j = 0; j < col; ++j) {
+			sum += *(arr_2d + col * i + j); // arr_2d[ col * i + j ];
 		};
 	};
 
