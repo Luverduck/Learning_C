@@ -55,9 +55,9 @@ int sum_2d(int arr_2d[][COLS], int rows)
 {
 	int sum = 0;
 
-	for (int j = 0; j < rows; ++j) {
-		for (int i = 0; i < sizeof(arr_2d[0]) / sizeof(int); ++i) {
-			sum += arr_2d[j][i];
+	for (int i = 0; i < rows; ++i) {
+		for (int j = 0; j < sizeof(arr_2d[0]) / sizeof(int); ++j) {
+			sum += arr_2d[i][j];
 		};
 	};
 
