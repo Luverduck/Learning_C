@@ -23,12 +23,12 @@ int main(void)
 	};
 
 	printf("[Yearly average temperatures of 3 years]\n");
-	for (int j = 0; j < YEARS; ++j) {
+	for (int i = 0; i < YEARS; ++i) {
 		double sum_yearly = 0.0;
-		for (int i = 0; i < MONTHS; ++i) {
-			sum_yearly += temperature[j][i];
+		for (int j = 0; j < MONTHS; ++j) {
+			sum_yearly += temperature[i][j];
 		};
-		printf("Year %d : average temperature = %.1f\n", j, sum_yearly / MONTHS);
+		printf("Year %d : average temperature = %.1f\n", i, sum_yearly / MONTHS);
 	};
 
 	return 0;

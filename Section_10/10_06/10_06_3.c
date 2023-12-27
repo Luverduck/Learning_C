@@ -32,10 +32,10 @@ int main(void)
 	}
 
 	printf("Avg temps :\t");
-	for (int i = 0; i < MONTHS; ++i) {
+	for (int j = 0; j < MONTHS; ++j) {
 		double sum_monthly = 0.0;
-		for (int j = 0; j < YEARS; ++j) {
-			sum_monthly += temperature[j][i];
+		for (int i = 0; i < YEARS; ++i) {
+			sum_monthly += temperature[i][j];
 		};
 		printf("%.1f\t", sum_monthly / YEARS);
 	};
