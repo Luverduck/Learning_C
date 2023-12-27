@@ -15,10 +15,10 @@ int main(void)
 
 
 	// 포인터 배열로 구현한 2차원 배열의 인덱스 연산
-	// arr_ptr[j][i] = *(arr_ptr[j] + i) = *(*(arr_ptr + j) + i) = *(arr_ptr + j)[i] 
-	for (int j = 0; j < 2; ++j) {
-		for (int i = 0; i < 3; ++i) {
-			printf("%d(==%d, %d)\n", arr_ptr[j][i], *(arr_ptr[j] + i), *(*(arr_ptr + j) + i));
+	// arr_ptr[i][j] = *( arr_ptr[i] + j ) = *( *(arr_ptr + i) + j ) = *( arr_ptr + i )[j];
+	for (int i = 0; i < 2; ++i) {
+		for (int j = 0; j < 3; ++j) {
+			printf("%d(==%d, %d)\n", arr_ptr[i][j], *(arr_ptr[i] + j), *(*(arr_ptr + i) + j));
 		}
 	}
 
