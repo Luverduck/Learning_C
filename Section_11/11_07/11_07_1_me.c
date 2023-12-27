@@ -31,7 +31,7 @@ int main(void)
 
 void swap(int* ptr_x, int* ptr_y)
 {
-	int temp = 0;
+	int temp = NULL;
 	temp = *ptr_x;
 	*ptr_x = *ptr_y;
 	*ptr_y = temp;
@@ -39,14 +39,14 @@ void swap(int* ptr_x, int* ptr_y)
 
 void selectionSort(int* arr, int size)
 {
-	for (int j = 0; j < size; ++j) {
-		int* ptr_min = &arr[j];
-		for (int i = j + 1; i < size; ++i) {
-			if (*ptr_min > arr[i]) {
-				ptr_min = &arr[i];
+	for (int i = 0; i < size - 1; ++i) {
+		int* ptr_min = &arr[i];
+		for (int j = i + 1; j < size; ++j) {
+			if (*ptr_min > arr[j]) {
+				ptr_min = &arr[j];
 			};
 		};
-		swap(&arr[j], ptr_min);
+		swap(&arr[i], ptr_min);
 	};
 };
 

@@ -42,15 +42,15 @@ void selectionSort(int* arr, int size)
 	int idx_min;
 
 	// i번째 요소에 대하여
-	for (int i = 0; i < size; ++i) 
+	for (int i = 0; i < size - 1; ++i) 
 	{
 		// i번째 요소가 최소값이라 가정
 		idx_min = i;
 
-		// j번째 요소와 비교
+		// j번째 요소와 현재 최소값 요소의 값 비교
 		for (int j = i + 1; j < size; ++j) 
 		{
-			// j번째 요소가 최소값의 요소보다 작으면
+			// j번째 요소의 값이 현재 최소값 요소의 값보다 작으면
 			if (arr[j] < arr[idx_min]) {
 				idx_min = j; // index 교체
 			}
