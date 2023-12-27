@@ -25,7 +25,7 @@ int main(void)
 	// arr_2d[0][0] == **arr_2d                    // (0, 0) 번째 요소
 	printf("%d %d\n", arr_2d[0][0], **arr_2d);
 
-	// arr_2d[j][i] == *(*(arr_2d + j) + i)        // (j, i) 번째 요소
+	// arr_2d[i][j] == *(*(arr_2d + i) + j)        // (i, j) 번째 요소
 	printf("%d %d\n", arr_2d[1][2], *(*(arr_2d + 1) + 2));
 
 	return 0;
