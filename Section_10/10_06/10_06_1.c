@@ -32,10 +32,10 @@ int main(void)
 		}
 	}
 
-	for (int j = 0; j < YEARS; ++j) {
-		printf("YEAR %d :\t", j);
-		for (int i = 0; i < MONTHS; ++i) {
-			printf("%.1f\t", temperature[j][i]);
+	for (int i = 0; i < YEARS; ++i) {
+		printf("YEAR %d :\t", i);
+		for (int j = 0; j < MONTHS; ++j) {
+			printf("%.1f\t", temperature[i][j]);
 		};
 		printf("\n");
 	};
