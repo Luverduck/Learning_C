@@ -38,18 +38,22 @@ void selectionSort(char* arr[], int size)
 	// 순서가 빠른 문자열의 index
 	int idx_min;
 
+	// i번째 요소에 대하여
 	for (int i = 0; i < size - 1; ++i) {
 
 		// j번째 문자열이 가장 순서가 빠른 문자열이라 가정
 		idx_min = i;
 
-		// j번째 이후의 문자열과 순차 비교
+		// j번째 요소와 현재 가장 순서가 빠른 문자열 비교
 		for (int j = i + 1; j < size; ++j) {
+
 			// 앞의 문자열의 ASCII 코드가 작으면(순서가 더 빠르면)
 			if (strcmp(arr[j], arr[idx_min]) < 0) {
 				idx_min = j; // index 교체
 			}
 		}
+
+		// i번째 요소와 가장 순서가 빠른 문자열을 교환
 		swap(&arr[i], &arr[idx_min]);
 	}
 };
