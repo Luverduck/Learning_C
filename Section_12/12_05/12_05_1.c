@@ -1,9 +1,11 @@
 // 12.5 자동 변수
 /*
-	Automatic Storage Class
+	자동 변수 (Automatic Variable)
+	Automatic Storage Class에 속하는 변수
 	- 지속 시간 : automatic
-	- 변수 영역 : block scope
+	- 변수 영역 : block
 	- 연결 상태 : none
+	- 저장 위치 : 스택(Stack)
 */
 
 #include <stdio.h>
