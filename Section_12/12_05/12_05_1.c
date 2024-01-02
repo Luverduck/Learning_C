@@ -9,6 +9,14 @@
 */
 
 #include <stdio.h>
+
+void func()
+{
+	int i = 0;
+	printf("%d\n", i);
+	i++;
+};
+
 int main(void)
 {
 	// 자동 변수의 특징
@@ -21,24 +29,28 @@ int main(void)
 
 	// 2. 변수가 속한 블록 영역 안에서만 식별자를 사용할 수 있다. (block scope)
 	// - 변수가 속한 블록 영역 안
-	{ // 자동 변수 i의 영역 [START]
+	{ // 변수 i의 영역 [START]
 		auto int i = 1;
 		{
-			// 자동 변수의 영역 내에 있는 새로운 블록에서도 자동 변수의 식별자 사용 가능
+			// 변수가 속한 블록 영역 안에서는 식별자 사용 가능
 			printf("i = %d\n", i);
 		}
-	} // 자동 변수 i의 영역 [END]
+	} // 변수 i의 영역 [END]
 
 	// - 변수가 속한 블록 영역 밖 (automatic storage duration)
 	{
-		{ // 자동 변수 j의 영역 [START]
+		{ // 변수 j의 영역 [START]
 			int j = 5;
-		} // 자동 변수 j의 영역 [END]
-		// 자동 변수의 영역 밖에서는 자동 변수의 식별자 사용 불가능
+		} // 변수 j의 영역 [END]
+		// 변수가 속한 블록 영역 밖에서는 식별자 사용 불가능
 		// printf("j = %d\n", j);
 	}
 
-	// 3. 블록 안과 밖에 동일한 식별자가 존재할 때 블록 안에서 블록 밖의 식별자는 숨김 처리 된다. (name hiding)
+	// 3. 변수가 속한 블록 영역이 끝나면 자동으로 메모리를 해제한다. (automatic storage duration)
+	func(); // 결과 : 0
+	func(); // 결과 : 0
+
+	// 4. 블록 안과 밖에 동일한 식별자가 존재할 때 블록 안에서 블록 밖의 식별자는 숨김 처리 된다. (name hiding)
 	int k = 2;
 
 	printf("k %lld\n", (long long)&k);    // 결과 : 856600212932
@@ -48,7 +60,7 @@ int main(void)
 		printf("k %lld\n", (long long)&k);  // 결과 : 856600212964
 	}
 
-	// 4. 블록이 없을 경우 자동 변수의 영역은 문장(Statement)의 시작부터 문장의 끝(;)까지가 된다.
+	// 5. 블록이 없을 경우 자동 변수의 영역은 문장(Statement)의 시작부터 문장의 끝(;)까지가 된다.
 	for (int l = 0; l < 10; ++l) 
 		printf("%d\n", l);
 
