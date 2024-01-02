@@ -2,8 +2,8 @@
 /*
 	Automatic Storage Class
 	- 지속 시간 : automatic
-	- 영역 : block
-	- 연결 : 없음
+	- 변수 영역 : block scope
+	- 연결 상태 : none
 */
 
 #include <stdio.h>
