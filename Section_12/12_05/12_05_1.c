@@ -19,8 +19,8 @@ int main(void)
 	// - auto 키워드 생략
 	int y = 0;
 
-	// 2. 자동 변수의 영역 안에서만 자동 변수의 식별자를 사용할 수 있다.
-	// - 자동 변수의 영역 안
+	// 2. 변수가 속한 블록 영역 안에서만 식별자를 사용할 수 있다. (block scope)
+	// - 변수가 속한 블록 영역 안
 	{ // 자동 변수 i의 영역 [START]
 		auto int i = 1;
 		{
@@ -29,7 +29,7 @@ int main(void)
 		}
 	} // 자동 변수 i의 영역 [END]
 
-	// - 자동 변수의 영역 밖
+	// - 변수가 속한 블록 영역 밖 (automatic storage duration)
 	{
 		{ // 자동 변수 j의 영역 [START]
 			int j = 5;
