@@ -11,6 +11,14 @@
 #include <stdio.h>
 int main(void)
 {
+	// 레지스터 변수의 특징
+
+	// 1. register 키워드로 선언한다. 
+	register int r;
+	r = 123;
+
+	// 2. 레지스터 변수는 메모리 주소를 알 수 없다.
+	//printf("%p\n", &r); // Error
 
 	return 0;
 }
