@@ -21,7 +21,7 @@ int main(void)
 {
 	// 블록 영역 정적 변수의 특징
 
-	// 1. 변수가 속한 블록이 끝나도 메모리를 유지한다. (static storage duration)
+	// 1. 프로그램이 종료될 때까지 메모리를 유지한다. (static storage duration)
 	func(); // 결과 : 0
 	func(); // 결과 : 1
 
