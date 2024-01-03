@@ -10,45 +10,20 @@
 
 #include <stdio.h>
 
-// 자동 변수 카운트 함수
-void count()
+void func()
 {
-	int i = 0;
-	printf("%lld\t i = %d\n", (long long)&i, i);
-	i++;
-};
-
-// 블록 영역 정적 변수 카운트 함수
-void count_static()
-{
-	static int i = 0;
-	printf("%lld\t i = %d\n", (long long)&i, i);
-	i++;
-};
-
-// 자동 변수 카운트 함수를 호출하는 함수
-void count_caller()
-{
-	count();
-};
-
-// 블록 영역 정적 변수 카운트 함수를 호출하는 함수
-void count_static_caller()
-{
-	count_static();
+	static int k = 0;
+	printf("%d\n", k);
+	k++;
 };
 
 int main(void)
 {
-	// 블록 영역 정적 변수 예제
+	// 블록 영역 정적 변수의 특징
 
-	// 자동 변수 카운트
-	count();
-	count();
-	count_caller();
+	// 1. 변수가 속한 블록이 끝나도 메모리를 유지한다. (static storage duration)
+	func(); // 결과 : 0
+	func(); // 결과 : 1
 
-	// 블록 영역 정적 변수 카운트
-	count_static();
-	count_static();
-	count_static_caller();
-};
+	return 0;
+}

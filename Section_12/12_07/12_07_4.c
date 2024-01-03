@@ -10,14 +10,17 @@
 
 #include <stdio.h>
 
+/*
+int func(static int i) { // 정적 변수는 매개 변수로 사용할 수 없다.
+	// ...
+};
+*/
+
 int main(void)
 {
-	// 블록 영역 정적 변수의 선언
+	// 블록 영역 정적 변수의 특징
 
-	// 블록 안에서 static 키워드로 선언한다.
-	{
-		// static 키워드로 선언
-		static int i = 0;
-	}
+	// 3. 정적 변수는 매개 변수로 사용할 수 없다.
+
 	return 0;
-}
+};
