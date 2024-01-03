@@ -12,9 +12,9 @@
 
 void func()
 {
-	static int k = 0;
-	printf("%d\n", k);
-	k++;
+	static int i = 0;
+	printf("%d\n", i);
+	i++;
 };
 
 int main(void)
