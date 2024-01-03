@@ -10,19 +10,20 @@
 
 #include <stdio.h>
 
+void func()
+{
+	int i = 0;
+	printf("%d\n", i);
+	i++;
+};
+
 int main(void)
 {
-	// 자동 변수의 선언
-	// 블록 안에서 auto 키워드로 선언하며, 키워드를 생략할 수 있다. 반드시 직접 초기화해야 한다.
-	{
-		// auto 키워드로 선언
-		auto int i = 0;
-	};
+	// 자동 변수의 특징
 
-	{
-		// auto 키워드 생략
-		int i = 0;
-	};
+	// 1. 변수가 속한 블록이 끝나면 자동으로 메모리를 해제한다. (automatic storage duration)
+	func(); // 결과 : 0
+	func(); // 결과 : 0
 
 	return 0;
 };

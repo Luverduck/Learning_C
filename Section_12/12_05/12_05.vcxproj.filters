@@ -18,5 +18,17 @@
     <ClCompile Include="12_05_1.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="12_05_2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="12_05_3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="12_05_4.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="12_05_5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
