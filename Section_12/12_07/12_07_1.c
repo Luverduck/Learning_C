@@ -21,25 +21,25 @@ int main(void)
 		static int x = 0;
 	}
 
-	// 2. 변수가 속한 블록 영역 안에서만 식별자를 사용할 수 있다. (block scope)
-	// - 변수가 속한 블록 영역 안
+	// 2. 변수가 속한 블록 안에서만 식별자를 사용할 수 있다. (block scope)
+	// - 변수가 속한 블록 안
 	{ // 변수 i의 영역 [START]
 		static int i = 1;
 		{
-			// 변수가 속한 블록 영역 안에서는 식별자 사용 가능
+			// 변수가 속한 블록 안에서는 식별자 사용 가능
 			printf("i = %d\n", i);
 		}
 	} // 변수 i의 영역 [END]
-	// - 변수가 속한 블록 영역 밖
+	// - 변수가 속한 블록 밖
 	{
 		{ // 변수 j의 영역 [START]
 			int j = 5;
 		} // 변수 j의 영역 [END]
-		// 변수가 속한 블록 영역 밖에서는 식별자 사용 불가능
+		// 변수가 속한 블록 밖에서는 식별자 사용 불가능
 		// printf("j = %d\n", j);
 	}
 
-	// 3. 변수가 속한 블록 영역이 끝나도 그 값을 유지한다. (static storage duration)
+	// 3. 변수가 속한 블록이 끝나도 변수에 저장된 값을 유지한다. (static storage duration)
 	func();
 	func();
 
@@ -48,7 +48,14 @@ int main(void)
 
 void func()
 {
-	static int i = 0;
-	printf("%d\n", i);
-	i++;
+	static int k = 0;
+	printf("%d\n", k);
+	k++;
 };
+
+// 4. 정적 변수는 매개 변수로 사용할 수 없다.
+/*
+int func(static int l) {
+	// ...
+};
+*/
