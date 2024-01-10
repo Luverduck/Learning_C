@@ -1,6 +1,10 @@
 // 13.3 텍스트 인코딩과 코드 페이지
 /*
-	
+	텍스트 인코딩 (Text Ecoding)
+	문자(Character)를 정해진 방식에 따라 바이너리 코드(Binary Code)로 변환하는 것
+	텍스트 인코딩 방식으로는 UTF-8, UTF-16 등이 있다.
+	바이너리 코드를 문자로 변환하는 것을 텍스트 디코딩(Text Decoding)이라 한다.
+	인코딩 방식과 같은 방식으로 디코딩을 해야 원래 문자로 변환할 수 있다.
 */
 
 #define _CRT_SECURE_NO_WARNINGS
