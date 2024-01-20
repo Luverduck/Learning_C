@@ -22,7 +22,7 @@ struct Fortune {
 };
 
 // bank_saving과 fund_invest의 합을 반환
-double sum(struct Fortune* my_fortune_in_func)
+double sum(const struct Fortune* my_fortune_in_func)
 {
 	return my_fortune_in_func->bank_saving + my_fortune_in_func->fund_invest;
 };
