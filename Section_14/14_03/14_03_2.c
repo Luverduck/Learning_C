@@ -1,6 +1,6 @@
 // 14.3 구조체의 메모리 할당
 /*
-	구조체 멤버 정렬 (Struct Member Alignment)
+	구조체 멤버 정렬 (Structure Member Alignment)
 	구조체를 메모리에 할당할 때 발생하는 데이터 구조 정렬 (Data Structure Alignment)
 	멤버 사이에 [Byte] 단위의 비어있는 메모리를 추가하여 
 	구조체의 메모리 크기를 CPU Word의 배수가 되도록 조정하는 것
