@@ -56,7 +56,7 @@ int main(void)
 
 	// 파일 출력
 	print_books(my_books, n);
-		
+
 	// 동적 할당 메모리 해제
 	free(my_books);
 	n = 0;
@@ -67,7 +67,7 @@ int main(void)
 // 구조체 정보 출력
 void print_books(const struct Book* ptr_books, int n)
 {
-	for (int i = 0; i < n; ++i) 
+	for (int i = 0; i < n; ++i)
 	{
 		printf("Book %d : \"%s\" written by \"%s\"\n", i, ptr_books[i].name, ptr_books[i].author);
 	}
@@ -78,20 +78,19 @@ void write_books(const char* filename, const struct Book* ptr_books, int n)
 {
 	// 파일 스트림을 연다.
 	FILE* ptr_file = fopen(filename, "w");
-	if (ptr_file == NULL) 
+	if (ptr_file == NULL)
 	{
 		fprintf(stderr, "Can't open %s file.\n", filename);
 		exit(EXIT_FAILURE);
 	}
 
+	// [START] TO DO : 바이너리 형태로 '쓰기'
 	// 구조체 배열의 갯수를 파일에 '쓰기' 한다.
-	fprintf(ptr_file, "%d\n", n);
+	fwrite(&n, sizeof(n), 1, ptr_file);
 
 	// 구조체 배열의 요소를 파일에 '쓰기' 한다.
-	for (int i = 0; i < n; ++i) 
-	{
-		fprintf(ptr_file, "%s\n%s\n", ptr_books[i].name, ptr_books[i].author);
-	}
+	fwrite(ptr_books, sizeof(struct Book), n, ptr_file);
+	// [END] TO DO
 
 	// 파일 스트림을 닫는다.
 	fclose(ptr_file);
@@ -102,38 +101,27 @@ struct Book* read_books(const char* filename, int* ptr_n)
 {
 	// 파일 스트림을 연다.
 	FILE* ptr_file = fopen(filename, "r");
-	if (ptr_file == NULL) 
+	if (ptr_file == NULL)
 	{
 		fputs("Can't open file.\n", stderr);
 		exit(EXIT_FAILURE);
 	}
 
+	// [START] TO DO : 바이너리 형태로 '읽기'
 	// 파일에서 구조체 배열의 길이를 '읽기' 한다.
-	int flag = fscanf(ptr_file, "%d%*c", ptr_n);
-	if (flag != 1) 
-	{
-		printf("File read failed\n");
-		exit(EXIT_FAILURE);
-	}
+	fread(ptr_n, sizeof(*ptr_n), 1, ptr_file);
 
 	// 구조체 배열을 동적 할당한다.
 	struct Book* books = (struct Book*)malloc(sizeof(struct Book) * (*ptr_n));
-	if (books == NULL) 
+	if (books == NULL)
 	{
 		printf("malloc() failed.\n");
 		exit(EXIT_FAILURE);
 	}
 
 	// 파일에서 구조체 배열의 요소를 '읽기' 한다.
-	for (int i = 0; i < *ptr_n; ++i) 
-	{
-		flag = fscanf(ptr_file, "%[^\n]%*c%[^\n]%*c", books[i].name, books[i].author);
-		if (flag != 2)
-		{
-			printf("File read failed\n");
-			exit(EXIT_FAILURE);
-		}
-	}
+	fread(books, sizeof(struct Book), *ptr_n, ptr_file);
+	// [END] TO DO
 
 	// 파일 스트림을 닫는다.
 	fclose(ptr_file);
