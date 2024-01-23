@@ -1,8 +1,7 @@
 // 14.12 익명 구조체
 /*
 	익명 구조체 (Anonymous Structure)
-	중첩 구조체의 멤버로 선언된 이름이 없는 구조체
-	- 중첩 구조체 (Nested Structure) : 하나의 구조체의 멤버로 다른 구조체를 갖는 구조체
+	태그가 없는 구조체
 */
 
 #include <stdio.h>
