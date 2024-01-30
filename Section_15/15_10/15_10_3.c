@@ -30,5 +30,10 @@ int main(void)
 
     printf("Day %u, Month %u, Year %u\n", fd.day, fd.month, fd.year);
 
+
+    // 비트 필드 사용 시 주의할 점
+    // scanf 함수로 비트 필드의 값을 설정할 수 없다.
+    // scanf("%d", &fd.day); // error C2104: '&' on bit field ignored
+
     return 0;
 }
