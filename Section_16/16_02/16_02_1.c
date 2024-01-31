@@ -26,8 +26,9 @@ int main(void)
 	printf("long long long long long \
 long long long long long\n");
 	//printf("long long long long long long long long long long");
+	// [주의] 들여쓰기 한 만큼 띄어쓰기로 인식
 	printf("long long long long long \
-	long long long long long\n"); // 들여쓰기 한 만큼 띄어쓰기로 인식
+	long long long long long\n");
 
 	// 토큰 처리 (space, tab, line break, whitespace character 집합을 하나의 space로 인식)
 	int /* a variable to count a number */n = 1;
