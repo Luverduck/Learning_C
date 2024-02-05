@@ -13,14 +13,11 @@
 #include <inttypes.h> // intmax_t
 
 int main(void)
-{ 
-	// 띄어쓰기로 구분된 여러 개의 입력 읽기
-	int i;
-	float f;
-	char str[30];
-	
-	scanf("%d %f %s", &i, &f, str);
-	printf("%d %f %s\n", i, f, str);
+{
+	// 공백 읽기
+	char c;
+	scanf("%c", &c);
+	printf("%i\n", c);
 
 	return 0;
 }

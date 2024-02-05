@@ -13,14 +13,15 @@
 #include <inttypes.h> // intmax_t
 
 int main(void)
-{ 
-	// 띄어쓰기로 구분된 여러 개의 입력 읽기
-	int i;
-	float f;
-	char str[30];
-	
-	scanf("%d %f %s", &i, &f, str);
-	printf("%d %f %s\n", i, f, str);
+{
+	// 부동 소수점의 형식 지정자
+	/*double d = 0.0;
+	scanf("%f", &d);
+	printf("%f\n", d);*/
+
+	float f = 0.0;
+	scanf("%lf", &f);
+	printf("%lf\n", f);
 
 	return 0;
 }
